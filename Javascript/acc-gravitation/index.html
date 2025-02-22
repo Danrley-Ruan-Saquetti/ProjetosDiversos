@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Gravidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .menu {
+            z-index: 10;
+            padding: 10px;
+        }
+        
+        .values-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            padding: 10px;
+            bottom: 0;
+            z-index: 10;
+        }
+        
+        .menu,
+        #canvas {
+            position: absolute;
+        }
+        
+        #canvas {
+            z-index: 5;
+        }
+        
+        input {
+            width: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="ball-input">
+            <h3>Bola</h3>
+            <label for="ball-acc-x">Aceleração inicial (x)</label>
+            <input id="ball-acc-x" type="range" name="ball-acc-x" id="" min="1" max="100"><br>
+            <label for="ball-mass">Massa </label>
+            <input id="ball-mass" type="range" name="ball-mass" id="" min="1" max="100"><br>
+            <label for="ball-radius">Raio </label>
+            <input id="ball-radius" type="range" name="ball-radius" id="" min="1" max="100">
+        </div>
+        <br>
+        <div class="planet-input">
+            <h3>Planeta</h3>
+            <label for="planet-mass">Massa </label>
+            <input id="planet-mass" type="range" name="planet-mass" id="" min="1" max="100"><br>
+            <label for="planet-radius">Raio </label>
+            <input id="planet-radius" type="range" name="planet-radius" id="" min="1" max="1000">
+        </div>
+    </div>
+
+    <div class="values-info">
+        <p>Aceleração da bola (x): <span id="info-ball-acc-x">0</span></p>
+        <p>Aceleração da bola (y): <span id="info-ball-acc-y">0</span></p>
+        <p>Velocidade da bola (x): <span id="info-ball-speed-x">0</span></p>
+        <p>Velocidade da bola (y): <span id="info-ball-speed-y">0</span></p>
+        <p>Massa da bola: <span id="info-ball-mass">0</span></p>
+        <p>Raio da bola: <span id="info-ball-radius">0</span></p>
+        <p>Massa do planeta: <span id="info-planet-mass">0</span></p>
+        <p>Raio do planeta: <span id="info-planet-radius">0</span></p>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas")
+        const TAGS = {
+            ball: {
+                accX: document.getElementById("ball-acc-x"),
+                mass: document.getElementById("ball-mass"),
+                radius: document.getElementById("ball-radius"),
+            },
+            world: {
+                mass: document.getElementById("planet-mass"),
+                radius: document.getElementById("planet-radius"),
+            },
+        }
+        const ctx = canvas.getContext("2d")
+
+        const state = {
+            ball: {
+                pos: {
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 5
+                },
+                speed: {
+                    x: 0,
+                    y: 0
+                },
+                acc: {
+                    x: 10,
+                    y: 0
+                },
+                mass: 10,
+                radius: 5
+            },
+            world: {
+                pos: {
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 2
+                },
+                mass: 50,
+                radius: 150
+            }
+        }
+
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+
+        const converterScale = 9.534285714285713e-13
+        const G = (6.674 * (10 ** -11)) / converterScale
+
+        const calcGravity = () => {
+            return (G * state.world.mass) / state.world.radius ** 2
+        }
+
+        const calcDistance = () => {
+            return Math.sqrt((state.world.pos.x - state.ball.pos.x) ** 2 + (state.world.pos.y - state.ball.pos.y) ** 2)
+        }
+
+        const calcForceGrav = () => {
+            return (calcGravity() * ((state.ball.mass * state.world.mass) / calcDistance())).toFixed(2)
+        }
+
+        const calcAcc = () => {
+            const calc = calcForceGrav()
+
+            const angle = (Math.atan2(state.world.pos.y - state.ball.pos.y, state.world.pos.x - state.ball.pos.x)).toFixed(2)
+
+            return {
+                x: calc * Math.cos(angle),
+                y: calc * Math.sin(angle)
+            }
+        }
+
+        const moveBall = () => {
+            state.ball.speed.x += state.ball.acc.x
+            state.ball.speed.y += state.ball.acc.y
+
+            state.ball.pos.x += state.ball.speed.x
+            state.ball.pos.y += state.ball.speed.y
+
+            state.ball.acc = calcAcc()
+        }
+
+        const getState = () => {
+            console.log(state.ball)
+        }
+
+        const update = () => {
+            moveBall()
+        }
+
+        const draw = () => {
+            ctx.fillStyle = "#fff"
+            ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight)
+            ctx.beginPath()
+            ctx.arc(state.world.pos.x, state.world.pos.y, state.world.radius, 0, Math.PI * 2, false)
+            ctx.fillStyle = "blue"
+            ctx.fill()
+            ctx.beginPath()
+            ctx.arc(state.ball.pos.x, state.ball.pos.y, state.ball.radius, 0, Math.PI * 2, false)
+            ctx.fillStyle = "red"
+            ctx.fill()
+        }
+
+        const printValue = () => {
+            document.getElementById("info-ball-acc-x").innerHTML = `${state.ball.acc.x.toFixed(3)}`
+            document.getElementById("info-ball-acc-y").innerHTML = `${state.ball.acc.y.toFixed(3)}`
+            document.getElementById("info-ball-speed-x").innerHTML = `${state.ball.speed.x.toFixed(3)}`
+            document.getElementById("info-ball-speed-y").innerHTML = `${state.ball.speed.y.toFixed(3)}`
+            document.getElementById("info-ball-mass").innerHTML = `${state.ball.mass}`
+            document.getElementById("info-ball-radius").innerHTML = `${state.ball.radius}`
+            document.getElementById("info-planet-mass").innerHTML = `${state.world.mass}`
+            document.getElementById("info-planet-radius").innerHTML = `${state.world.radius}`
+        }
+
+        function animate() {
+            printValue()
+            update()
+            draw()
+
+            requestAnimationFrame(animate)
+        }
+
+        function resetState() {
+            state.ball.pos.x = window.innerWidth / 2
+            state.ball.pos.y = window.innerHeight / 5
+            state.ball.acc.x = Number(TAGS.ball.accX.value)
+            state.ball.acc.y = 0
+            state.ball.speed.x = 0
+            state.ball.speed.y = 0
+            state.ball.mass = Number(TAGS.ball.mass.value)
+            state.ball.radius = Number(TAGS.ball.radius.value)
+            state.world.mass = Number(TAGS.world.mass.value)
+            state.world.radius = Number(TAGS.world.radius.value)
+        }
+
+        window.onload = () => {
+            TAGS.ball.accX.addEventListener("change", resetState)
+            TAGS.ball.accX.value = state.ball.acc.x
+            TAGS.ball.mass.addEventListener("change", resetState)
+            TAGS.ball.mass.value = state.ball.mass
+            TAGS.ball.radius.addEventListener("change", resetState)
+            TAGS.ball.radius.value = state.ball.radius
+            TAGS.world.mass.addEventListener("change", resetState)
+            TAGS.world.mass.value = state.world.mass
+            TAGS.world.radius.addEventListener("change", resetState)
+            TAGS.world.radius.value = state.world.radius
+            animate()
+        }
+
+    </script>
+</body>
+
+</html>
