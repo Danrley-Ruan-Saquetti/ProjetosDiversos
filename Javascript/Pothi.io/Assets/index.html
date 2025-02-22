@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-Game | Pothi.io</title>
+    <link rel="shortcut icon" href="Icons/Logo.png">
+    <link rel="stylesheet" href="Style/Menu_Inicial_Style.css">
+</head>
+
+<body>
+    <div id="menu">
+        <div id="barra_lateral">
+
+            <div id="title" class="barra">
+                <h1>Pothi.io</h1>
+                <p id="versao">V1.1.1</p>
+                <p id="credit">Criado por <a href="#">Dan Ruan</a></p>
+            </div>
+
+            <div id="comecar" class="barra">
+                <p>Start</p>
+            </div>
+
+            <div id="modos">
+                <div id="facil" class="barra">
+                    <p>Fácil</p>
+                </div>
+
+                <div id="normal" class="barra">
+                    <p>Normal</p>
+                </div>
+
+                <div id="dificil" class="barra">
+                    <p>Dificil</p>
+                </div>
+            </div>
+
+            <a href="Contato.html">
+                <div id="contato" class="barra">
+                    <p>Contato</p>
+                </div>
+            </a>
+
+        </div>
+        <div id="controles_updates">
+            <div id="controles" class="box">
+                <h4>Controles</h4>
+                <p>W - Para cima<br>D - Para direita<br>S - Para baixo<br>A - Para esquerda<br>Espace - Desh (Novo)</p>
+            </div>
+            <div id="updates" class="box">
+                <h4>Atualizações V1.1.1</h4>
+                <p>- Novo desing de menu mais interativo e responsivo;</p>
+                <p>- Nova mecânica de deslize adicionada (Desh):<br><span>-Quando ativado, você poderá passar por cima dos pegadores sem perder vida.</span></p>
+                <p>- Novo sistema de efeitos sonoros.</p>
+            </div>
+        </div>
+        <div id="resultadoPartida">
+            <h2></h2>
+            <p id="duracao" class="texto"></p>
+            <p id="score" class="texto"></p>
+            <p id="carDes" class="texto"></p>
+        </div>
+    </div>
+    <canvas id="canvas" width="1310" height="640"></canvas>
+    <footer id="rodape">
+        <div>
+            <p id="credit">@2021 Mini - Game Pothi.io V.1.1.1</p>
+        </div>
+    </footer>
+    <script src="Script/Class.js"></script>
+    <script src="Script/Game_Script.js"></script>
+</body>
+
+</html>
