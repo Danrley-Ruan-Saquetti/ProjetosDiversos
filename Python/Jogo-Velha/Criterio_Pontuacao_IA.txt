@@ -1,0 +1,7 @@
+1 - Se posição_gerada pela IA for aleatória e que haja uma trinca do adversário que a faça perder -5 pontos
+2 - Se posição_gerada pela IA for aleatória e que haja uma trinca que a faça ganhar -2 pontos
+3 - Se posição_gerada pela IA bloquear uma trinca do adversário, mas que haja uma trinca que a faça ganhar -1 pontos
+4 - Se posição_gerada pela IA ja estiver ocupada -1 pontos
+5 - Se posição_gerada pela IA for aleatória, sem chances de vitória pros dois lados +1 ponto
+6 - Se posição_gerada pela IA bloquear uma trinca do adversário que a faça perder +5 pontos
+7 - Se posição_gerada pela IA completar uma trinca que a faça ganhar +10 pontos
