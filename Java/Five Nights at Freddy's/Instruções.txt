@@ -1,0 +1,19 @@
+Este é um mini game inspirado no primeiro jogo de Five Nights at Freddy's. Maximize a janela de execução para uma melhor experiência!
+
+ENREDO: Você é um guarda de segurança do turno da noite de uma pizzaria, chamada Freddy Fazbear Pizzaria. Os Animatrônics da pizzaria são robôs de atração e entretenimento ao público, e são eles: Bonnie, Chica, Freddy e Foxy, mas a noite eles ganham vida própria e vão te caçar, então tome cuidado!
+
+INSTRUÇÕES: Seu escritório é composta por uma porta na direita e uma na esquerda, junto com um sistema de luz em cada porta, uma câmera de segurança e um sistema de bateria.
+
+A mecânica dos animatrônics são:
+- Bonnie e Chica: Aparecem nas portas e, para evita-los, você deve fechar a porta;
+- Foxy: Aparece na porta esquerda, mas tome cuidado, pois ele é sorrateiro e pode te atacar a qualquer hora; caso ele esteja se aproximando e você abrir a câmera, ele irá correndo para o seu escritório te atacar, por isso, feche a porta o mais rápido possível (ele não irá aparecer caso a porta estiver fechada);
+- Freddy: Aparece na porta direita e, para evita-lo, você deve olhar para ele pela câmera periodicamente até que ele vai embora.
+
+Há um padrão no comportamento dos animatrônics, que são divididos em três estágios:
+1º - Quando os animatrônics estão em um estado de 'repouso';
+2º - Quando os animatrônics aparecem na sua porta;
+3º - Se por acaso não conseguir impedi-los, eles irão entrar no seu escritório e irão te atacar, caso consiga, eles voltaram para o 1º estágio.
+
+A bateria do seu escritório vai diminuindo conforme a noite passa e também quando as portas estiverem fechadas, as luzes ligadas ou a câmera aberta. Se a bateria acabar, o Freddy irá te matar!
+
+Você deve sobreviver das 12am até 6am e pode escolher a noite que deseja jogar, que vai da primeira até a sexta noite, do mais fácil ao mais difícil, respectivamente, e há a noite sete, que é uma noite customizada, onde você pode definir o nível de dificuldade de cada animatrônic.

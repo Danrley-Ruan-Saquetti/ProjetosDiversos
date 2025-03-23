@@ -1,0 +1,108 @@
+COMANDOS:
+1 - Equipar Slot 1
+2 - Equipar Slot 2
+3 - Equipar Slot 3
+E - Equipar Ítem
+F - Pegar Ítem
+G - Largar Ítem
+J - Abrir/Fechar Diário
+ESC - Encerrar Partida
+WASDRX - Se Locomover
+
+LEGENDA:
++ - Você
+◆ - Orbe
+◌ - Impressão Digital
+L - Livro
+E - EMF
+O - Óculos
+T - Termômetro
+R - Rádio
+
+ENREDO:
+Você é um inspetor paranormal que foi contratado para identificar o fantasma que está assombrando a casa de um cliente. Para isso, deve-se usar itens que lhe auxiliaram a encontrar evidências e explorar a casa. Os itens básicos são: Livro, EMF, Óculos Termômetro e o Rádio. Quando achar uma evidência, registre-a em seu diário, pressionando a letra 'J'.
+Após coletar evidências suficientes, selecione qual o fantasma que julga ser o responsável por assombrar a casa e vá para van e informe o código 'ESC' para encerrar a partida. Se o fantasma que você selecionou for o mesmo que está assombrando a casa, então seu trabalho está feito, caso contrário, sua reputação irá cair!
+
+ÍTENS:
+Livro: Quando aberto, o fantasma pode escrever nele (tenha em mente que alguns fantasmas não conseguem escrever no livro). Se a escrita aparecer, isso conta como evidência.
+
+Óculos: O Óculos é um item usado ​​para encontrar Orbes Fantasmas. Os Orbes surgem aleatoriamente pela casa. Se você vir um orbe, isso conta como evidência.
+
+EMF:
+EMF nível 1 - É a leitura padrão dos campos eletromagnéticos. Isto não significa nada.
+EMF nível 2 - Significa que está no quarto do fantasma.
+EMF nível 5 - É causada por uma atividade fantasma muito forte e conta como uma evidência (tenha em mente que nem todos os fantasmas atingirão o EMF nível 5).
+
+Termômetro: Um dispositivo portátil que também é muito bom para identificar o quarto do fantasma rapidamente. Qualquer temperatura acima dos 7°C é a temperatura base para qualquer 'coisa normal'. Isso não significa nada. De 0°C à 4°C, significa que você está no quarto fantasma, mas não conta como uma evidência. Qualquer temperatura abaixo de -1°C conta como evidência.
+
+Rádio: Com o Rádio equipado e ligado, é possível se comunicar com o fantasma pelo chat, onde você pode fazer as seguintes perguntas:
+Whats_your_name?
+Are_you_here?
+Are_you_a_girl?
+Are_you_a_boy?
+How_old_are_you?
+Where_are_you?
+Faça ao fantasma uma pergunta de cada vez (tenha em mente que nem todos os fantasmas responderão o Rádio). Lembre-se de pôr um underline (_) entre as palavras, senão, não irá poder se comunicar com o fantasma.
+
+Impressões Digitais também podem ser encontradas no quarto do fantasma e contam como evidência (tenha em mente que nem todos os fantasmas deixam impressões digitais).
+
+TIPOS DE FANTASMAS:
+Spirit:
+Descrição: Os Spirits são o tipo de fantasma que vagueiam pelo local onde morreram.
+Evidências: Os espíritos são capazes de se comunicar utilizando o Rádio, assim como de escrever em livros. Deixarão também impressões digitais.
+Evidências em Destaque: Rádio, Escrita e Impressões Digitais.
+
+Banshee:
+Descrição: É um fantasma perigoso que irá caçar as suas presas uma de cada vez. Diz-se que os Banshees choram a morte de um membro da família e alguns dizem que podem ser ouvidos a chorar.
+Evidências: Uma Banshee provocará a leitura de EMF nível 5 e temperaturas negativas semelhantes às de um Phantom. No entanto, as Banshees também podem deixar impressões digitais.
+Evidências em Destaque: EMF nível 5, Temperaturas Negativas e Impressões Digitais.
+
+Demon:
+Descrição: O Demon é um fantasma violento. São conhecidos por atacar esporadicamente.
+Evidências: A temperatura negativa ocorre quando um Demon está presente no local. São capazes de se comunicar com o rádio ou de escrever num livro.
+Evidências em Destaque: Temperatura Negativa, Rádio e Escrita
+
+Jinn:
+Descrição: Os Jinns são fantasmas territoriais rápidos e conhecidos por se tornarem facilmente ameaçados, resultando em ataques.
+Evidências: Um Jinn provocará a leitura de EMF nível 5 e orbes fantasmas. Podem também se comunicar usando o rádio.
+Evidências em Destaque: EMF nível 5, Orbes e Rádio.
+
+Mare:
+Descrição: A Mare torna-se mais forte no escuro, e é mais susceptível de caçar quando as luzes são apagadas.
+Evidências: Na presença de um Mare, pode encontrar temperaturas negativas e orbes fantasmas e são capazes de se comunicar com o rádio.
+Evidências em Destaque: Temperatura Negativa, Orbes e Rádio.
+
+Oni:
+Descrição: Os Onis são semelhantes aos Demons e são fantasmas extremamente fortes.
+Evidências: Um Oni provocará leituras de EMF nível 5, podem se comunicar com o rádio e escrever em livros.
+Evidências em Destaque: EMF nível 5, Rádio e Escrita.
+
+Phantom:
+Descrição: Os Phantoms são um dos fantasmas capazes de possuir os vivos, induz o medo naqueles que têm o azar de o encontrar.
+Evidências: Os Phantoms provocam leituras de EMF nível 5, e temperaturas negativas. Orbes fantasmas também podem ser encontrados quando um fantasma está presente.
+Evidências em Destaque: EMF nível 5, Temperaturas Negativas e Orbes Fantasmas.
+
+Poltergeist:
+Descrição: Os Poltergeists são um fantasma barulhento. Eles podem manipular múltiplos objectos para causar medo.
+Evidências: Os poltergeists podem se comunicar com o rádio e deixar impressões digitais. Na sua presença, os orbes fantasmas podem ser encontrados.
+Evidências em Destaque: Rádio, Impressões Digitais e Orbs Fantasmas.
+
+Revenant:
+Descrição: Os Revenants são fantasmas violentos, atacam qualquer alvo próximo. No folclore, um Revenant é um cadáver animado, ressuscitado dos mortos.
+Evidências: os Revenants causarão leituras de EMF nível 5. Podem escrever em livros, e deixar impressões digitais.
+Evidências em Destaque: EMF5, Escrita e Impressões Digitais.
+
+Shade:
+Descrição: Os Shades são um fantasma tímido e não podem causar qualquer atividade paranormal se houver múltiplas pessoas nas proximidades.
+Evidências: As sombras causarão leituras de EMF nível 5. São capazes de escrever em livros, e os orbes fantasmas podem ser encontrados quando um Shade está presente.
+Evidências em Destaque: EMF nível 5, Escrita, &  e Orbes.
+
+Yurei:
+Descrição: Yurei são fantasmas cheios de ódio, muitas vezes à procura de vingança no mundo físico. Eles drenam a sanidade um pouco mais depressa do que outros fantasmas.
+Evidências: Yurei pode causar temperaturas negativas e os orbes fantasmas estão frequentemente presentes. Podem escrever em livros.
+Evidências em Destaque: Temperatura Negativa, Orbes e Escrita.
+
+Wendigo:
+Descrição: O Wendigo é um espírito maligno, originário do folclore das Primeiras Nações na América do Norte. Diz-se que faz com que aqueles sob a sua influência tenham uma insaciável ganância e fome, por vezes para vidas humanas.
+Evidências: Os Wendigo podem ser encontrados pelas suas impressões digitais, temperaturas geladas, e comunicação através do rádio.
+Evidências em Destaques: Impressões digitais, Temperatura Negativa e Rádio.

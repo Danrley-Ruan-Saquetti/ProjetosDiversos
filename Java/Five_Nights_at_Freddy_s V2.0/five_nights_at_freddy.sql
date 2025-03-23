@@ -1,0 +1,1 @@
+SELECT * FROM five_nights_at_freddy.jogador;
