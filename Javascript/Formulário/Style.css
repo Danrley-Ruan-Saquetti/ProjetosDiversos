@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(45deg, #4400ff, #8400ff);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 1000;
+    letter-spacing: .2rem;
+    font-size: max(2rem, 5vw);
+}
+
+form {
+    position: relative;
+    width: 25vw;
+    min-width: 280px;
+    height: auto;
+    background-color: #e5ecfa;
+    padding: 1.5rem;
+    border-radius: .8rem;
+}
+
+form .inputBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+form .inputBox:first-child {
+    margin-top: .8rem;
+}
+
+form input {
+    position: relative;
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transform: scalex(70%) translateX(2rem);
+    letter-spacing: .05rem;
+    transition: all .3s;
+}
+
+form input[type="submit"] {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, #4400ff, #8400ff);
+    cursor: pointer;
+    border-radius: .8rem;
+    color: white;
+    font-size: 1.2rem;
+    transform: scaleX(1);
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(45deg, #290099, #4f0099);
+}
+
+form label {
+    position: absolute;
+    font-weight: 600;
+    font-size: .95rem;
+    letter-spacing: .1rem;
+    top: .5rem;
+    left: 0;
+    cursor: text;
+    transition: .2s;
+}
+
+form input:focus {
+    transform: scaleX(.97) translateX(-2px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+form input:focus~label,
+form input:active~label {
+    transform: translateY(-25px);
+}

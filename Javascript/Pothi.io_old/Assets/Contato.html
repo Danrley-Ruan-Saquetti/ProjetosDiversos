@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato | Pothi.io</title>
+    <link rel="shortcut icon" href="Icons/Logo.png">
+    <link rel="stylesheet" href="Style/Contato_Style.css">
+</head>
+
+<body>
+    <form id="formulario" action="https://formsubmit.co/danrsaquetti@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <div id="contato">
+            <legend>
+                <p><b>Contato - Dan Ruan</b></p>
+                <p>Telefone: 98841-2215</p>
+                <p>E-mail: danrsaquetti@gmail.com</p>
+            </legend>
+        </div>
+        <div id="inputBox">
+            <div class="campo">
+                <label for="nome" class="labelInput">Nome</label>
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+            </div>
+            <div class="campo">
+                <label for="email" class="labelInput">E-mail</label>
+                <input type="text" name="email" id="email" class="inputUser" required>
+            </div>
+            <div class="campo">
+                <label for="mensagem" class="labelInput">Mensagem</label>
+                <textarea name="message" id="mensagem" placeholder="Coloque seu feedback ou dicas para futuras atualizações aqui..."></textarea>
+            </div>
+            <div class="campo">
+                <input type="submit" name="submit" id="submit" class="botao">
+                <button id="voltar" class="botao" onClick="history.go(-1)">Voltar</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
